@@ -1,0 +1,1047 @@
+1)To develop web page using HTML5.0 having table, form and lists.
+HTML: 
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="b.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Admission Form</h1>
+
+  <div class="image-container">
+    <img src="apsit.png" alt="APSIT">
+  </div>
+
+  <form>
+    <div class="form-field">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" value="">
+    </div>
+    
+    <div class="form-field">
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" value="">
+    </div>
+    
+    <div class="form-field">
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age" value="">
+    </div>
+    
+    <div class="form-field">
+      <label for="contact">Contact No:</label>
+      <input type="text" id="contact" name="contact" value="">
+    </div>
+  </form>
+
+  <form>
+    <p>Choose your Gender:</p>
+    <div class="radio-group">
+      <input type="radio" id="male" name="Gender" value="Male">
+      <label for="male">Male</label>
+    </div>
+    <div class="radio-group">
+      <input type="radio" id="female" name="Gender" value="Female">
+      <label for="female">Female</label>
+    </div>
+    <div class="radio-group">
+      <input type="radio" id="others" name="Gender" value="Others">
+      <label for="others">Others</label>
+    </div>
+  </form>
+
+  <form>
+    <p>Choose your preferred Fields:</p>
+    <div class="checkbox-group">
+      <input type="checkbox" id="cs" name="fields" value="Computer Science">
+      <label for="cs">Computer Science</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="it" name="fields" value="Information Technology">
+      <label for="it">Information Technology</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="et" name="fields" value="Electronics">
+      <label for="et">Electronics</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="ds" name="fields" value="Data Science">
+      <label for="ds">Data Science</label>
+    </div>
+    <div class="checkbox-group">
+      <input type="checkbox" id="aiml" name="fields" value="Artificial Intelligence and Machine Learning">
+      <label for="aiml">Artificial Intelligence and Machine Learning</label>
+    </div>
+  </form>
+
+  <h2>Number of seats in Branches</h2>
+
+  <table>
+    <tr>
+      <th>Branch</th>
+      <th>NO. of Seats</th>
+    </tr>
+    <tr>
+      <td>Computer Science</td>
+      <td>180</td>
+    </tr>
+    <tr>
+      <td>Information Technology</td>
+      <td>180</td>
+    </tr>
+    <tr>
+      <td>Electronics</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>Data Science</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <td>Artificial Intelligence and Machine Learning</td>
+      <td>120</td>
+    </tr>
+  </table>
+
+  <form>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
+
+
+
+CSS:
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: black; /* Set the window background color to black */
+  color: white; /* Set text color to white */
+}
+
+h1, h2 {
+  text-align: center;
+  color: white; /* Set header text color to white */
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%; /* Set image width to match the container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 300px; /* Optional: Set a max-width if needed */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+form {
+  background: #333; /* Set form background color to dark grey */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  margin: 10px 0 5px;
+  color: white; /* Set label text color to white */
+}
+
+.form-field input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #555; /* Set input border color to dark grey */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #222; /* Set input background color to darker grey */
+  color: white; /* Set input text color to white */
+}
+
+.radio-group, .checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.radio-group input[type="radio"], .checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: white; /* Set radio and checkbox accent color to white */
+}
+
+form input[type="submit"] {
+  background: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+  background: #4cae4c; /* Change hover color to a lighter greenish color */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th, table td {
+  border: 1px solid #555; /* Set table borders to dark grey */
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #333; /* Set table header background to dark grey */
+  color: white; /* Set table header text color to white */
+}
+
+table td {
+  background-color: #222; /* Set table cell background to darker grey */
+} 
+
+
+
+2)To design wabpage using CSS3 with properties and styles.
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .base {
+            border: 5px groove grey;
+            padding: 50px;
+            padding-bottom: 80px;
+        }
+
+        .con1 {
+            display: inline-block;
+            width: 33%;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+        .right {
+            float: right;
+            margin-bottom: 10px;
+        }
+
+        .clear::after {
+            clear: both;
+            content: "";
+            display: table;
+        }
+
+        .p1 {
+            text-align: center;
+            font-size: 1.7em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 5px;
+            border: 1px solid #ddd;
+        }
+
+        input[type="text"] {
+            background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fimage.shutterstock.com%2Fimage-vector%2Foutline-search-icon-illustration-vector-260nw753573802.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fsearch%2Bicon&tbnid=npAAyCtuCeC91M&vet=10CAUQxiAoA2oXChMIyKfH27jM5wIVAAAAAB0AAAAAEAc..i&docid=HeqpQe314bS56M&w=260&h=280&itg=1&q=search%20icon%20for%20text%20box%20.png&ved=0CAUQxiAoA2oXChMIyKfH27jM5wIVAAAAAB0AAAAAEAc');
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+
+        button {
+            border: none;
+            border-radius: 50%;
+            padding: 6px 10px;
+        }
+
+        .fa-eye {
+            color: #04a9f4;
+        }
+
+        .fa-pen {
+            color: #ffc207;
+        }
+
+        .fa-trash-alt {
+            color: #e34724;
+        }
+    </style>
+</head>
+<body>
+    <div class="base">
+        <div class="clear">
+            <div class="con1">
+                Show 
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option id="5" selected="5">5</option>
+                    <option>6</option>
+                </select>
+                entries
+            </div>
+            <div class="con1">
+                <p class="p1">Customer <strong>Details</strong></p>
+            </div>
+            <div class="con1">
+                <input type="text" name="search" placeholder="search" style="float: right; margin-top: 30px;">
+            </div>
+        </div>
+
+        <div class="container">
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Name <i class="fa fa-sort"></i></th>
+                    <th>Address</th>
+                    <th>City <i class="fa fa-sort"></i></th>
+                    <th>Pincode</th>
+                    <th>Country <i class="fa fa-sort"></i></th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Thomas Hardy</td>
+                    <td>89 Chiarsco Rd.</td>
+                    <td>Portland</td>
+                    <td>91219</td>
+                    <td>USA</td>
+                    <td>
+                        <i class="fas fa-eye"></i>&nbsp;
+                        <i class="fas fa-pen"></i>&nbsp;
+                        <i class="far fa-trash-alt"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Maria Anders</td>
+                    <td>Obere Str.57</td>
+                    <td>Berlin</td>
+                    <td>12209</td>
+                    <td>Germany</td>
+                    <td>
+                        <i class="fas fa-eye"></i>&nbsp;
+                        <i class="fas fa-pen"></i>&nbsp;
+                        <i class="far fa-trash-alt"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Fran Wilson</td>
+                    <td>C/Araquil,67</td>
+                    <td>Madrid</td>
+                    <td>28023</td>
+                    <td>Spain</td>
+                    <td>
+                        <i class="fas fa-eye"></i>&nbsp;
+                        <i class="fas fa-pen"></i>&nbsp;
+                        <i class="far fa-trash-alt"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dominic Perrier</td>
+                    <td>25, rue Lauriston</td>
+                    <td>Paris</td>
+                    <td>75016</td>
+                    <td>France</td>
+                    <td>
+                        <i class="fas fa-eye"></i>&nbsp;
+                        <i class="fas fa-pen"></i>&nbsp;
+                        <i class="far fa-trash-alt"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Martin Blank</td>
+                    <td>Via Monteblanco 34</td>
+                    <td>Turin</td>
+                    <td>10100</td>
+                    <td>Italy</td>
+                    <td>
+                        <i class="fas fa-eye"></i>&nbsp;
+                        <i class="fas fa-pen"></i>&nbsp;
+                        <i class="far fa-trash-alt"></i>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="clear">
+            <div class="left">Showing <strong>5</strong> out of <strong>25</strong> entries</div>
+            <div class="right">
+                <button type="button" style="border-radius: 0;">Previous</button>
+                <button type="button">1</button>
+                <button type="button">2</button>
+                <button type="button" style="background-color: #04a9f4;">3</button>
+                <button type="button">4</button>
+                <button type="button">5</button>
+                <button type="button" style="border-radius: 0;">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+3)Constructresponsive website using Bootstrap. 
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+ 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+ 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+ 
+  <title>A.P. Shah</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <section id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">College of Engineering</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#service">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#product">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="#social">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Banner -->
+<!-- Banner -->
+<section id="banner">
+  <div class="container-fluid" id="banner-container">
+    <div class="row align-items-center" id="banner-row">
+      <div class="col-md-6" id="banner-col">
+        <h3>BEST PROFESSIONAL WEBSITE DESIGN SOFTWARE DEVELOPMENT COMPANY</h3>
+        <p>The fastest way to grow your business with the leader in Technology</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-center">
+          <a class="btn btn-primary" href="#" role="button">Contact Us</a>
+        </div>
+      </div>
+      <div class="col-md-6" id="banner-col2">
+        <img class="img-fluid rounded mx-auto d-block" src="bb.jpeg" alt="Banner Image" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Services -->
+  <section id="service">
+    <h1 class="text-center">SERVICES</h1>
+    <div class="container-fluid" id="service-container">
+      <div class="row" id="service-row">
+        <div class="col-md-4" id="service-col1">
+          <img src="web.jpeg" class="img-fluid rounded mx-auto d-block" alt="Website Design" />
+          <h3>Website Design</h3>
+          <p>User Experience Design. Website Content Strategy. Cross Browser and Platform Testing.</p>
+        </div>
+        <div class="col-md-4" id="service-col2">
+          <img src="bul.png" class="img-fluid rounded mx-auto d-block" alt="Bulk SMS" />
+          <h3>Bulk SMS</h3>
+          <p>1. Toll Free Number 2. IVR 3. Virtual Number 4. Political or any Voice Broadcasting</p>
+        </div>
+        <div class="col-md-4" id="service-col3">
+          <img src="pp.jpeg" class="img-fluid rounded mx-auto d-block" alt="Payment Gateways" />
+          <h3>Payment Gateways</h3>
+          <p>PayU India is the flagship company of Naspers group which is a $25 Billion internet and media conglomerate listed on London and Johannesburg stock exchanges respectively.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- About Us -->
+  <section id="about">
+    <h1 class="text-center">About Us</h1>
+    <div class="container-fluid" id="about-container">
+      <div class="row" id="about-row">
+        <div class="col-md-6" id="about-col">
+          <h3>Why Us</h3>
+          <ul>
+            <li>Probuz is all about Delivering High Quality web design and development services, Cost effective and reliable solutions.</li>
+            <li>SCHOOL/COLLEGE MANAGEMENT SOFTWARE (CAMPUS PRO)</li>
+            <li>Let us take care of your Business needs. Customer Productivity is our Priority.</li>
+          </ul>
+        </div>
+        <div class="col-md-6" id="about-col2">
+          <img class="img-responsive rounded mx-auto d-block" src="a.jpeg" alt="About Us" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Products -->
+  <section id="product">
+    <h1 class="text-center">Our Products</h1>
+    <div class="container-fluid" id="product-container">
+      <div class="row" id="product-row">
+        <div class="col-md-6" id="product-col1">
+          <img class="img-responsive rounded mx-auto d-block" src="s.jpeg" alt="Our Products" />
+        </div>
+        <div class="col-md-6" id="product-col2">
+          <h3>Product List</h3>
+          <ul>
+            <li>CLINIC MANAGEMENT SYSTEM</li>
+            <li>SCHOOL/COLLEGE MANAGEMENT SOFTWARE (CAMPUS PRO)</li>
+            <li>SERVICE MANAGEMENT SOFTWARE</li>
+            <li>E-COMMERCE WEBSITE</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Social -->
+  <section id="social">
+    <h1 class="text-center">Get In Touch</h1>
+    <div class="d-grid gap-2 d-md-flex justify-content-center">
+      <div class="row align-items-center" id="social-row">
+        <div class="col-md-4 social-col">
+          <a href="#"><img class="img-responsive rounded mx-auto d-block" src="f.jpeg" alt="Face Book" /></a>
+        </div>
+        <div class="col-md-4 social-col">
+          <a href="#"><img class="img-responsive rounded mx-auto d-block" src="i.jpeg" alt="Instagram" /></a>
+        </div>
+        <div class="col-md-4 social-col">
+          <a href="#"><img class="img-responsive rounded mx-auto d-block" src="t.png" alt="Twitter" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="container-fluid" id="footer-container">
+      <div class="row" id="footer-row">
+        <div class="col-md-4" id="footer-col1">
+          <h3>My Website</h3>
+          <p>At XYZ we believe that customers should always get easy-to-use, best-in-class, and fast services. XYZ has achieved standards which help customers achieve satisfaction and realize value for their hard-earned money.</p>
+        </div>
+        <div class="col-md-4" id="footer-col2">
+          <h3>Contact Us</h3>
+          <p>Call Us: 1800-121-6532</p>
+          <p>Email Us: support@xyz.com</p>
+        </div>
+        <div class="col-md-4" id="footer-col3">
+          <h3>Subscribe To Newsletter</h3>
+          <form>
+            <div class="mb-3">
+              <input type="email" placeholder="Enter Your Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
+
+CSS:
+ {
+margin: 0;
+padding: 0;
+font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+background-color: #0a193d;
+}
+
+.navbar-nav {
+margin-right: 0 !important;
+padding-right: 100px;
+}
+
+.navbar-nav .nav-item a {
+color: white !important;
+}
+
+.navbar-brand {
+color: white !important;
+padding-left: 100px;
+}
+
+.navbar-toggler {
+color: white !important;
+}
+
+/* Banner */
+#banner-container {
+background-color: #0a193d;
+color: white !important;
+padding: 80px 0;
+}
+
+#banner-row img {
+max-width: 70%;
+height: auto;
+display: block;
+padding-left: 30px;
+}
+
+#banner-row h3, p {
+padding-left: 20px;
+padding-top: 20px;
+text-align: center;
+}
+
+#banner-row a {
+background-color: white !important;
+color: black !important;
+border: none;
+margin: 20px;
+}
+
+#banner-col {
+padding-left: 20px;
+}
+
+/* Services */
+#service {
+padding: 80px 0;
+}
+
+#service h1 {
+padding-bottom: 70px;
+}
+
+/* About Us */
+#about {
+padding: 80px 0;
+}
+
+#about h1 {
+padding-bottom: 70px;
+}
+
+#about-col ul {
+padding: 50px;
+}
+
+#about-col ul li {
+padding-top: 15px;
+}
+
+/* Products */
+#product {<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+padding: 80px 0;
+}
+
+#product h1 {
+padding-bottom: 70px;
+}
+
+#product-col2 ul {
+padding-top: 90px;
+}
+
+#product-col2 ul li {
+padding-top: 15px;
+}
+
+/* Social */
+#social {
+padding: 80px 0;
+}
+
+#social h1 {
+padding-bottom: 70px;
+}
+
+.social-col a:hover img {
+transform: translateY(-10px);
+}
+
+#social-row {
+flex-direction: row;
+}
+
+/* Footer */
+#footer-container {
+padding: 80px 0;
+}
+
+#footer-col1, #footer-col2, #footer-col3 {
+padding: 20px;
+}
+
+.mb-3 {
+padding-top: 10px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 987px) {
+.navbar-brand {
+padding-left: 0;
+}
+}
+
+@media only screen and (max-width: 768px) {
+#banner-row img {
+padding-top: 20px;
+}
+
+.social-col {
+width: 33%;
+}
+}
+
+
+4)Develop web page using java script
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analog Clock</title>
+<link rel="stylesheet" href="clock.css">
+</head>
+<body>
+<div class="clock">
+<div class="clock-face">
+<div class="number number1">1</div>
+<div class="number number2">2</div>
+<div class="number number3">3</div>
+<div class="number number4">4</div>
+<div class="number number5">5</div>
+<div class="number number6">6</div>
+<div class="number number7">7</div>
+<div class="number number8">8</div>
+<div class="number number9">9</div>
+<div class="number number10">10</div>
+<div class="number number11">11</div>
+<div class="number number12">12</div>
+<div class="hand hour-hand"></div>
+<div class="hand minute-hand"></div>
+<div class="hand second-hand"></div>
+</div>
+</div>
+<script src="clock.js"></script>
+</body>
+</html>
+CSS:
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: #f0f0f0;
+margin: 0;
+}
+.clock {
+width: 300px;
+height: 300px;
+border: 50px solid black;
+border-radius: 50%;
+position: relative;
+padding: 20px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+background: white;
+}
+.clock-face {
+position: relative;
+width: 100%;
+height: 100%;
+transform: translateY(-3px); /* Fix for the hands positioning */
+}
+.hand {
+width: 50%;
+background: black;
+position: absolute;
+top: 50%;
+transform-origin: 100%;
+transform: rotate(90deg);
+transition: all 0.05s;
+transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.hour-hand {
+height: 10px;
+width: 30%;
+left: 20%;
+}
+.minute-hand {
+height: 4px;
+}
+.second-hand {
+height: 2px;
+background: red;
+}
+.number {
+position: absolute;
+font-size: 24px;
+transform: translate(-50%, -50%);
+}
+.number1 { top: 17%; left: 70%; }
+.number2 { top: 30%; left: 85%; }
+.number3 { top: 50%; left: 90%; }
+.number4 { top: 70%; left: 85%; }
+.number5 { top: 83%; left: 70%; }
+.number6 { top: 90%; left: 50%; }
+.number7 { top: 83%; left: 30%; }
+.number8 { top: 70%; left: 15%; }
+.number9 { top: 50%; left: 10%; }
+.number10 { top: 30%; left: 15%; }
+.number11 { top: 17%; left: 30%; }
+.number12 { top: 10%; left: 50%; }
+JS Code:
+// script.js
+const hourHand = document.querySelector('.hour-hand');
+const minuteHand = document.querySelector('.minute-hand');
+const secondHand = document.querySelector('.second-hand');
+function setDate() {
+const now = new Date();
+const seconds = now.getSeconds();
+const secondsDegrees = ((seconds / 60) * 360) + 90;
+secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+const minutes = now.getMinutes();
+const minutesDegrees = ((minutes / 60) * 360) + ((seconds / 60) * 6) + 90;
+minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
+const hours = now.getHours();
+const hoursDegrees = ((hours / 12) * 360) + ((minutes / 60) * 30) + 90;
+hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+}
+setInterval(setDate, 1000);
+setDate();
+
+
+5)Construct front end applications using React and back end using
+Node.js/expres
+To set up a full-stack application using React for the front end and Node.js with Express for the back end on Ubuntu, follow these steps:
+
+### Prerequisites########################################################################
+
+1. **Node.js and npm**: Make sure you have Node.js and npm installed. You can install them using the following commands:
+
+
+   sudo apt update
+   sudo apt install nodejs npm
+
+2. **Check installations**:
+
+   node -v
+   npm -v
+  
+
+3. **Install `npx`** (included with npm 5.2 and higher):
+
+
+   sudo npm install -g npx
+
+
+### Step 1: Set Up Your Project Structure
+
+1. **Create a folder for your project**:
+
+   mkdir my-fullstack-app
+   cd my-fullstack-app
+
+
+2. **Create two subfolders**: `client` for the React app and `server` for the Node.js back end:
+
+
+   mkdir client server
+
+
+### Step 2: Set Up the Back End with Node.js and Express
+
+1. **Navigate to the `server` folder**:
+
+   cd server
+
+
+2. **Initialize a new Node.js project**:
+
+
+   npm init -y
+
+
+3. **Install the required packages**:
+
+   npm install express cors body-parser
+
+
+4. **Create the main server file** (e.g., `server.js`):
+
+
+   touch server.js
+
+
+5. **Open `server.js` in a text editor and add the following code**:
+
+***********************************************************server.js*********************************************************************
+   // server/server.js
+
+   const express = require('express');
+   const cors = require('cors');
+   const bodyParser = require('body-parser');
+
+   const app = express();
+   const PORT = process.env.PORT || 5000;
+
+   // Middleware
+   app.use(cors());
+   app.use(bodyParser.json());
+
+   // Sample route
+   app.get('/api/data', (req, res) => {
+       res.json({ message: 'Hello from the server!' });
+   });
+
+   app.listen(PORT, () => {
+       console.log(`Server is running on http://localhost:${PORT}`);
+   });
+  ***********************************************************server.js*********************************************************************
+
+
+### Step 3: Set Up the Front End with React
+
+1. **Navigate back to the `my-fullstack-app` directory**:
+
+
+   cd ..
+
+
+2. **Navigate to the `client` folder** and create a new React app using Create React App:
+
+
+   cd client
+   npx create-react-app .
+
+
+3. **Install Axios for making HTTP requests**:
+
+  
+   npm install axios
+
+
+4. **Modify `src/App.js` to fetch data from the back end**:
+
+   Open `src/App.js` in a text editor and replace its contents with:
+
+*******************************************************************************App.js***************************************************
+   // client/src/App.js
+
+   import React, { useEffect, useState } from 'react';
+   import axios from 'axios';
+
+   const App = () => {
+       const [data, setData] = useState(null);
+
+       useEffect(() => {
+           const fetchData = async () => {
+               try {
+                   const response = await axios.get('http://localhost:5000/api/data');
+                   setData(response.data.message);
+               } catch (error) {
+                   console.error('Error fetching data:', error);
+               }
+           };
+           fetchData();
+       }, []);
+
+       return (
+           <div style={{ textAlign: 'center', marginTop: '50px' }}>
+               <h1>React and Node.js Example</h1>
+               {data ? <p>{data}</p> : <p>Loading...</p>}
+           </div>
+       );
+   };
+
+   export default App;
+ *******************************************************************************App.js*************************************************************************
+### Step 4: Run the Applications
+
+1. **Start the back-end server**:
+
+   
+   node server.js
+
+
+2. **Open another terminal and navigate to the `client` folder**. Then start the React app:
+
+
+   cd client
+   npm start
+
+
+### Step 5: Access Your Application
+
+- Open your web browser and go to `http://localhost:3000` to see your React application. It should display "Hello from the server!" fetched from your Node.js back end.
